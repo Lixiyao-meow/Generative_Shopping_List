@@ -1,0 +1,17 @@
+# See: https://github.com/tpope/vim-sleuth
+# https://editorconfig.org/#overview
+
+[*.py]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+[*.yaml]
+indent_style = space
+indent_size = 2
+tab_width = 2
+
+[*.yml]
+indent_style = space
+indent_size = 2
+tab_width = 2
