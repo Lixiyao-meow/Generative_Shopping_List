@@ -1,6 +1,7 @@
-import yaml
 import logging
-from typing import List, Dict
+from typing import Dict, List
+
+from generative_shopping_list.storage import YamlFileStorage
 
 LOGGER = logging.getLogger(__name__)
 
@@ -11,9 +12,7 @@ def dishes_to_shopping_list(
     # NOTE: We make a big assumption that all units of a given ingredient are the same across all recipes.
 
     # read yaml file
-    recipe_path = "./ingredients/recipe.yaml"
-    with open(recipe_path, "r") as file:
-        recipes = yaml.safe_load(file)
+    recipes = YamlFileStorage("./ingredients/recipe.yaml").read()
 
     shopping_list = {}
 

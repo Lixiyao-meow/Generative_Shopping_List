@@ -4,7 +4,7 @@ general_taos_chicken:
   description: A popular Chinese-American dish featuring crispy chicken pieces, red pepper and onion in a sweet and sour sauce.
   ingredients:
     chicken_thighs:
-      amount: 300 
+      amount: 300
       unit: grams
     red_pepper:
       amount: 1
@@ -29,13 +29,14 @@ teriyaki_chicken:
   description: A Japanese dish of grilled chicken glazed with a sweet soy sauce-based marinade.
   ingredients:
     chicken_thighs:
-      amount: 300 
+      amount: 300
       unit: grams
     garlic:
       amount: 4
       unit: cloves
-  
+
   seasoning:
     - soy_sauce
     - oyster_sauce
     - sugar
+
