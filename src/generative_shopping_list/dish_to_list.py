@@ -1,18 +1,20 @@
 import logging
-from typing import Dict, List
+from typing import Any, Dict, List
 
-from generative_shopping_list.storage import YamlFileStorage
+from generative_shopping_list.storage import StorageBackend, YamlFileStorage
 
 LOGGER = logging.getLogger(__name__)
 
 
 def dishes_to_shopping_list(
-    dishes: List[str],
+    dishes: List[str], storage_backend: StorageBackend | None = None
 ) -> Dict[str, Dict[str, str | int | float]]:
     # NOTE: We make a big assumption that all units of a given ingredient are the same across all recipes.
 
     # read yaml file
-    recipes = YamlFileStorage("./ingredients/recipe.yaml").read()
+    if storage_backend is None:
+        storage_backend = YamlFileStorage("./ingredients/recipe.yaml")
+    recipes: Dict[str, Any] = storage_backend.read()
 
     shopping_list = {}
 
