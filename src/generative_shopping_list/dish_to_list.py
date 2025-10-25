@@ -1,6 +1,7 @@
-import yaml
 import logging
-from typing import List, Dict
+from typing import Dict, List
+
+import yaml
 
 LOGGER = logging.getLogger(__name__)
 
