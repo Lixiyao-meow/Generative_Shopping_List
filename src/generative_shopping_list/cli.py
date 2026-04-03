@@ -1,6 +1,8 @@
-import click
 import logging
 from typing import List
+
+import click
+
 from generative_shopping_list.dish_to_list import dishes_to_shopping_list
 
 logging.basicConfig(level=logging.INFO)
